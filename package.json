@@ -1,0 +1,19 @@
+{
+  "name": "mkhairul-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "CHOKIDAR_USEPOLLING=true astro dev --host 0.0.0.0 --port 9527",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "astro": "^5.9.4",
+    "sharp": "^0.34.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
