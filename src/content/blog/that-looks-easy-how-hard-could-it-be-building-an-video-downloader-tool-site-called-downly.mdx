@@ -1,0 +1,51 @@
+---
+title: 'That looks easy, how hard could it be? Building an video downloader tool site called Downly'
+description: 'Building a video downloader tool called Downly'
+pubDate: 'June 24 2025'
+heroImage: '../../assets/downly_hero.jpg'
+---
+
+import DownlyConcept from '../../assets/downly_concept.jpg';
+import DownlyActual from '../../assets/downly_actual.jpg';
+import DownlyScreenshot from '../../assets/downly_screenshot.jpg';
+import DownlyLoading from '../../assets/downly_loading.jpeg';
+import DownlyReady from '../../assets/downly_ready.jpeg';
+
+As I was doom scrolling through social media, I often use these video downloader tool to repost memes. So I thought, how hard can it be to make a fully functional video downloader tool that is SEO optimized?
+So I started building one. The initial idea looks like this
+
+<div className="blog-image">
+  <img src={DownlyConcept.src} alt="Downly concept design" />
+</div>
+
+Then I explored more on the idea (in detail) and after dozens of "tasks" later, it become something like this.
+
+<div className="blog-image">
+  <img src={DownlyActual.src} alt="Downly actual implementation" />
+</div>
+
+Few hours later, Behold! My own [instagram video downloader](https://downly.app)
+
+<div className="blog-image">
+  <img src={DownlyScreenshot.src} alt="Downly screenshot" />
+</div>
+
+This project consists of 3 repos and each deploys to instances (frontend, backend with task workers, IaC), it is more complicated than the image above (not by a large margin but still alot).
+For a weekend project, not bad. I focused a little bit on user experience, PWA functionalities and some other things that I have forgotten by the time I wrote this. 
+
+Few important things that I focused on (since I am the one who wants to use it),
+- Making it PWA (installable)
+- Shareable To (Web Share Target API) which means you can share to it from other apps on your mobile 
+- Drops task if it takes > 2 minutes so that the message will be re-queued and reprocessed.
+
+<div className="blog-image">
+  <img src={DownlyLoading.src} alt="Downly loading state" />
+</div>
+
+<div className="blog-image">
+  <img src={DownlyReady.src} alt="Downly ready state" />
+</div>
+
+It might be overkill to use rabbitmq for this kind of app but I planned on using it for other apps too.
+
+This project will be maintained as long as I'm able to because I've been doom scrolling alot through instagram and I need to repost meme videos on facebook.
